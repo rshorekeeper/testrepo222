@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NOIR — Secondhand & Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <div class="brand">NOIR</div>
+            <ul class="nav-links">
+                <li><a class="nav-item" href="#home">Головна</a></li>
+                <li><a class="nav-item" href="#collection">Колекція</a></li>
+                <li><a class="nav-item" href="#about">Про нас</a></li>
+                <li><a class="nav-item" href="#contact">Контакти</a></li>
+            </ul>
+            <div class="actions">
+                <button class="cta-button">Колекція</button>
+                <div class="cart-icon" role="button" aria-label="Кошик">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <h1>Елегантність у вторинному</h1>
+                <p>Куровані речі з історією — сучасний, сталий та вишуканий стиль.</p>
+                <div class="hero-cta">
+                    <button class="cta-button">Переглянути колекцію</button>
+                    <button class="ghost-button">Підписатися</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="collection" class="collection">
+            <h2 class="section-title">Вибране</h2>
+            <div class="product-grid"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-inner">
+                <h2>Про NOIR</h2>
+                <p>Ми підбираємо найцікавіші речі: від вінтажу до сучасних брендів. Менше — краще. Якість понад кількість.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Контакти</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Київ, Україна</p>
+                <p><i class="fas fa-phone"></i> +38 (099) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> hello@noir.ua</p>
+            </div>
+            <div>
+                <h3>Підписка</h3>
+                <form id="newsletter" class="newsletter">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="ghost-button">Підписатися</button>
+                </form>
+            </div>
+            <div>
+                <h3>Соцмережі</h3>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2025 NOIR — Всі права захищено</div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true">
+        <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+            <button class="close-cart" aria-label="Закрити">&times;</button>
+            <h2 id="cart-title">Кошик</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div id="cart-summary" class="cart-summary">
+                <div>Разом: <span id="cart-total">0</span> грн</div>
+                <button id="checkout-btn" class="checkout-btn">Оформити</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
